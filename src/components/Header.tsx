@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { ToggleClose, ToggleIcon } from "../utils/svgicons";
-import logo from "../Assets/images/logo.png";
+import logo from "@/assets/images/logo.png"
 
 const Header = () => {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
