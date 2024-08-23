@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root { 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +30,36 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+.video-frame {
+  position: relative;
+  padding-bottom: 47.5%;
+  height: 0;
+  max-width: 875px;
+  margin: 0 auto;
+}
+.video-frame video { 
+  background: url(../assets/images/laptop.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 2% 12% 10% 12%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.title-icon:before {
+  content: "";
+  background: url(../assets/images/titleicon.svg);
+  background-size: cover;
+  background-position: center;
+  width: 27px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
