@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.button {
+  border-radius: 4px;
+  background: #e56f20;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15px 30px;
+  height: 55px;
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.nav-menu-list {
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  padding: 8px 10px;
+  color: #202c2f;
+}
+.menuToggleBtn {
+  display: none;
+}
 .video-frame {
   position: relative;
   padding-bottom: 47.5%;
@@ -9,6 +35,10 @@
   max-width: 875px;
   margin: 0 auto;
 }
+input:focus-visible, textarea:focus-visible {
+  outline: none;
+}
+
 .video-frame video { 
   background: url(../assets/images/laptop.png);
   background-repeat: no-repeat;
@@ -24,13 +54,50 @@
 }
 .title-icon:before {
   content: "";
-  background: url(../assets/images/titleicon.svg);
+  background: url(../assets/images/titleicon.png);
   background-size: cover;
   background-position: center;
   width: 27px;
   height: 20px;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -40px;
+  top: 13px;
   z-index: 2;
+}
+.section-title {
+  color: #202C2F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.section-title span {
+  color: #E56F20;
+}
+@media screen and (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 40px 18px;
+    background: #d9e0e9;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 2;
+    flex-direction: column;
+  }
+  .nav-menu.open {
+    display: block;
+  }
+  .menuToggleBtn {
+    display: block;
+  }
+  .nav-menu .close-btn {
+    position: absolute;
+    right: 18px;
+    top: 22px;
+    font-size: 20px;
+  }
 }

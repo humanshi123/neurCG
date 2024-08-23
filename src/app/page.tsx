@@ -1,5 +1,4 @@
-
-
+import VideoPlayer from "@/components/VideoPlayer";
 import {
   CardIcon1,
   CardIcon2,
@@ -16,7 +15,10 @@ import img1 from "@/assets/images/cardimg1.png";
 import img2 from "@/assets/images/cardimg2.png";
 import img3 from "@/assets/images/cardimg3.png";
 import Contact from "@/components/Contact";
-import VideoPlayer from "@/components/VideoPlayer";
+import StepsCard from "@/components/StepsCard";
+import stepimg1 from "@/assets/images/stepimg1.png"
+import stepimg2 from "@/assets/images/stepimg2.png"
+import stepimg3 from "@/assets/images/stepimg3.png"
 
 const OverviewData = [
   {
@@ -50,6 +52,26 @@ const OverviewData = [
     icon2: <TypeIcon3 />,
   },
 ];
+const StepCardData = [
+  {
+    id: 1,
+    title: "Upload Your Video",
+    description: "Discover our innovative solutions designed to empower your business, enhance efficiency, and drive success in new markets.",
+    imgSrc: stepimg1,
+  },
+  {
+    id: 2,
+    title: "Select Your Video",
+    description: "Discover our innovative solutions designed to empower your business, enhance efficiency, and drive success in new markets.",
+    imgSrc: stepimg2,
+  },
+  {
+    id: 3,
+    title: "Export Your Translated Video",
+    description: "Discover our innovative solutions designed to empower your business, enhance efficiency, and drive success in new markets.",
+    imgSrc: stepimg3,
+  },
+]
 export default function Home() {
 
   return (
@@ -70,7 +92,7 @@ export default function Home() {
       <div>
         <div className="relative pt-[50px]">
           <div className="video-frame">
-          <VideoPlayer url="/assets/homevideo.mp4" />
+            <VideoPlayer url="/assets/homevideo.mp4" />
           </div>
           <div className="flex items-center bg-white gap-4 rounded-lg pr-5 absolute top-[25%] translate-y-[-25%] left-[50px] ">
             <VideoIcon1 />
@@ -86,7 +108,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section>
+      <section className="mt-[30px]">
+      <h1 className="section-title text-center mb-[46px] ">
+      The fastest, easiest way to <br />
+          <span>
+          Transform your Videos{" "}
+          </span>
+        </h1>
         {OverviewData.map((item) => (
           <ProductDesc
             key={item.id}
@@ -98,6 +126,28 @@ export default function Home() {
             buttonLink={item.buttonLink}
           />
         ))}
+      </section>
+      <section className="my-[80px] ">
+       <div className="grid grid-cols-2">
+        <div className="grid gap-[40px] ">
+        {StepCardData.map((data)=> (
+          <StepsCard
+          key={data.id}
+          title= {data.title}
+          description= {data.description}
+          imgSrc={data.imgSrc}
+          />
+        )) }
+        </div>
+        <div className="md:pl-[100px]">
+          <h4 className="#202C2F text-base"><span className="bg-[#E56F20] h-[9px] w-[9px] rounded-full inline-block mr-[10px] ">
+          </span> Result-Driven</h4>
+          <h2 className="section-title">How It <span>Works.</span></h2>
+          <p className="text-[#202020] text-lg my-[30px] ">Our goal is to be the most successful Marketing Automation service provider in the market through deliverance and diligence. We aim to automate the business with best practices and make it simple for business owners.</p>
+        <button className="button">Get Started Now</button>
+        
+        </div>
+       </div>
       </section>
       <Contact />
     </main>
