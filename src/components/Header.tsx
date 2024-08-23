@@ -3,9 +3,17 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { ToggleClose, ToggleIcon } from "../utils/svgicons";
-import logo from "@/assets/images/logo.png"
+import logo from "@/assets/images/logo.png";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const Header = () => {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    return pathname === path;
+  };
+
   const [isToggleOpen, setIsToggleOpen] = useState(false);
 
   const handleToggleOpen = () => {
@@ -31,27 +39,49 @@ const Header = () => {
               <ToggleClose />
             </button>
             <li>
-              <Link href="/" className="nav-menu-list">
+              {/* className="nav-menu-list" */}
+              <Link
+                href="/"
+                className={clsx(
+                  "nav-menu-list", // default class
+                  { active: isActive("/") } // conditional class
+                )}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="nav-menu-list">
+              <Link
+                href="/use-case"
+                className={clsx(
+                  "nav-menu-list", // default class
+                  { active: isActive("/use-case") } // conditional class
+                )}
+              >
                 Use Cases
               </Link>
             </li>
             <li>
-              <Link href="/therapistnetwork" className="nav-menu-list">
+              <Link href="/therapistnetwork" className={clsx(
+                  "nav-menu-list", // default class
+                  { active: isActive("/contact") } // conditional class
+                )}>
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="nav-menu-list">
+              <Link href="/faq" className={clsx(
+                  "nav-menu-list", // default class
+                  { active: isActive("/about") } // conditional class
+                )}>
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="nav-menu-list">
+              <Link href="/contact" className={clsx(
+                  "nav-menu-list", // default class
+                  { active: isActive("/pricing") } // conditional class
+                )}>
                 Pricing
               </Link>
             </li>

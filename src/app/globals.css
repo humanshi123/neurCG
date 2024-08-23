@@ -94,6 +94,9 @@ input:focus-visible, textarea:focus-visible {
 .card-wrapper {
   padding-top: calc(var(--index) * 2em)
 }
+.nav-menu-list.active {
+  color: #E56F20; /* Example active color */
+}
 
 
 
