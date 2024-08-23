@@ -6,7 +6,7 @@
 }
 
 body,
-p {
+p, li {
   font-family: var(--font-nunito);
 }
 
