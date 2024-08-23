@@ -4,6 +4,7 @@ import Link from "next/link";
 import { RightIcon, LeftIcon } from "@/utils/svgicons";
 
 interface CardProps {
+  id: string;
   title: string;
   description: string;
   buttonLink: string;
@@ -13,6 +14,7 @@ interface CardProps {
 }
 
 const ProductDesc: React.FC<CardProps> = ({
+  id,
   title,
   description,
   buttonLink,
@@ -21,7 +23,8 @@ const ProductDesc: React.FC<CardProps> = ({
   icon2,
 }) => {
   return (
-    <div className="grid grid-cols-2 items-center gap-[15px] bg-[#F5F5F5] rounded-[20px] px-[85px] py-[60px] mb-5">
+   <div id={id} className="card-wrapper sticky top-[100px]">
+     <div className="grid grid-cols-2 items-center gap-[15px] bg-[#F5F5F5] rounded-[20px] px-[85px] py-[60px] mb-5">
       <div className="pr-2">
         <h2 className="title-icon relative text-[#202C2F] text-[30px] font-[700] ">
           {" "}
@@ -54,6 +57,7 @@ const ProductDesc: React.FC<CardProps> = ({
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

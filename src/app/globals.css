@@ -76,6 +76,27 @@ input:focus-visible, textarea:focus-visible {
 .section-title span {
   color: #E56F20;
 }
+#card-1 {
+  --index: 1;
+}
+
+#card-2 {
+  --index: 2;
+}
+
+#card-3 {
+  --index: 3;
+}
+
+#card-4 {
+  --index: 4;
+}
+.card-wrapper {
+  padding-top: calc(var(--index) * 2em)
+}
+
+
+
 @media screen and (max-width: 1024px) {
   .nav-menu {
     display: none;

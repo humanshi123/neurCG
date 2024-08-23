@@ -22,7 +22,7 @@ import stepimg3 from "@/assets/images/stepimg3.png"
 
 const OverviewData = [
   {
-    id: "1",
+    id: "card-1",
     title: "Convert Your Text And Image to Live Videos",
     description:
       "Creating over 500 unique text and photo-based avatar animations to bring your digital persona to life with vibrant, dynamic visuals.",
@@ -32,7 +32,7 @@ const OverviewData = [
     icon2: <TypeIcon1 />,
   },
   {
-    id: "2",
+    id: "card-2",
     title: "Convert Your Text And Image to Live Videos",
     description:
       "Creating over 500 unique text and photo-based avatar animations to bring your digital persona to life with vibrant, dynamic visuals.",
@@ -42,7 +42,7 @@ const OverviewData = [
     icon2: <TypeIcon2 />,
   },
   {
-    id: "3",
+    id: "card-3",
     title: "Convert Your Text And Image to Live Videos",
     description:
       "Creating over 500 unique text and photo-based avatar animations to bring your digital persona to life with vibrant, dynamic visuals.",
@@ -108,15 +108,17 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section className="mt-[30px]">
+      <section className="mt-[30px] relative">
       <h1 className="section-title text-center mb-[46px] ">
       The fastest, easiest way to <br />
           <span>
           Transform your Videos{" "}
           </span>
         </h1>
-        {OverviewData.map((item) => (
+       <div className="sticky-cards">
+       {OverviewData.map((item) => (
           <ProductDesc
+          id={item.id}
             key={item.id}
             title={item.title}
             description={item.description}
@@ -126,8 +128,9 @@ export default function Home() {
             buttonLink={item.buttonLink}
           />
         ))}
+       </div>
       </section>
-      <section className="my-[80px] ">
+      <section className="my-[80px] relative">
        <div className="grid grid-cols-2">
         <div className="grid gap-[40px] ">
         {StepCardData.map((data)=> (
@@ -140,12 +143,14 @@ export default function Home() {
         )) }
         </div>
         <div className="md:pl-[100px]">
-          <h4 className="#202C2F text-base"><span className="bg-[#E56F20] h-[9px] w-[9px] rounded-full inline-block mr-[10px] ">
+         <div className="sticky top-[35%] ">
+         <h4 className="#202C2F text-base"><span className="bg-[#E56F20] h-[9px] w-[9px] rounded-full inline-block mr-[10px] ">
           </span> Result-Driven</h4>
           <h2 className="section-title">How It <span>Works.</span></h2>
           <p className="text-[#202020] text-lg my-[30px] ">Our goal is to be the most successful Marketing Automation service provider in the market through deliverance and diligence. We aim to automate the business with best practices and make it simple for business owners.</p>
         <button className="button">Get Started Now</button>
         
+         </div>
         </div>
        </div>
       </section>
