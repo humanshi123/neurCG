@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     //sticky top-[30px]
-    <header className="px-[30px] mt-[30px] sticky top-[30px] z-10 ">
+    <header className="px-[15px] mt-[10px] sticky top-[10px] z-10 lg:mt-[30px] lg:px-[30px] lg:top-[30px]">
       <div className=" shadow-md nav-container w-full bg-white flex rounded-[7px] items-center justify-between py-[12.5px] px-[15px]  md:px-[30px]">
         <div className="nav_logo lg:w-[188px]">
           <Link href="/" className="nav-logo-link">
@@ -62,7 +62,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/therapistnetwork" className={clsx(
+              <Link href="/contact" className={clsx(
                   "nav-menu-list", // default class
                   { active: isActive("/contact") } // conditional class
                 )}>
@@ -70,7 +70,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/faq" className={clsx(
+              <Link href="/about" className={clsx(
                   "nav-menu-list", // default class
                   { active: isActive("/about") } // conditional class
                 )}>
@@ -78,28 +78,26 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/contact" className={clsx(
+              <Link href="/pricing" className={clsx(
                   "nav-menu-list", // default class
                   { active: isActive("/pricing") } // conditional class
                 )}>
                 Pricing
               </Link>
             </li>
-            <li className="md:hidden mt-4">
-              <Link
-                href="/login"
-                className="text-white text-sm bg-[#283C63] rounded-[30px] px-[30px] py-[13px]"
-              >
-                Login
-              </Link>
+           
+            <li className="md:hidden ">
+            <Link
+              href="/contact"
+              className="nav-menu-list"
+            >
+              Free Trial
+            </Link>
             </li>
-            <li className="md:hidden mt-4">
-              <Link
-                href="/login"
-                className="text-white text-sm bg-[#283C63] rounded-[30px] px-[30px] py-[13px]"
-              >
-                Free Trial
-              </Link>
+            <li className="md:hidden ">
+            <Link href="/contact" className="nav-menu-list">
+              Login
+            </Link>
             </li>
           </ul>
         </div>

@@ -77,40 +77,40 @@ export default function Home() {
 
   return (
     <main className="container">
-      <div className="pt-[40px] md:pt-[80px] text-center">
-        <h1 className="text-black text-[30px] md:text-[66px] font-[800] ">
+      <div className="pt-[40px] md:pt-[60px] lg:pt-[80px] text-center">
+        <h1 className="text-black text-[30px] leading-[40px] md:text-[42px] lg:text-[66px] font-[800] md:leading-[66px] lg:leading-[86px]">
           Effortless Video Production: <br />
           <span className="text-[#e56f20]">
             AI-Driven, Instant, and Multilingual{" "}
           </span>
         </h1>
-        <h3 className="mt-[34px] font-[600] text-[#00000080] max-w-[540px] mx-auto ">
+        <h3 className="mt-[20px] font-[600] text-[#00000080] max-w-[540px] mx-auto md:mt-[34px]  ">
           Instantly Convert Videos into Multiple Languages with Just One Click,
           Expanding Your Global Reach
         </h3>
-        <button className="button mt-[40px]">Free Trial</button>
+        <button className="button  mt-[20px] md:mt-[40px]">Free Trial</button>
       </div>
       <div>
         <div className="relative pt-[50px]">
           <div className="video-frame">
             <VideoPlayer url="/assets/homevideo.mp4" />
           </div>
-          <div className="flex items-center bg-white gap-4 rounded-lg pr-5 absolute top-[25%] translate-y-[-25%] left-[50px] ">
+          <div className="hidden md:flex items-center bg-white gap-4 rounded-lg pr-5 absolute top-[25%] translate-y-[-25%] left-[50px]  ">
             <VideoIcon1 />
             <h3 className="text-[#202C2F]">Text And Image To Video</h3>
           </div>
-          <div className="flex items-center bg-white gap-4 rounded-lg pr-5 absolute bottom-[30%] left-[100px] ">
+          <div className="hidden md:flex items-center bg-white gap-4 rounded-lg pr-5 absolute bottom-[30%] left-[100px] ">
             <VideoIcon2 />
             <h3 className="text-[#202C2F]">Text And Image To Video</h3>
           </div>
-          <div className="flex items-center bg-white gap-4 rounded-lg pr-5 absolute top-[50%] translate-y-[-50%]  right-[30px] ">
+          <div className="hidden md:flex items-center bg-white gap-4 rounded-lg pr-5 absolute top-[50%] translate-y-[-50%]  right-[30px] ">
             <VideoIcon3 />
             <h3 className="text-[#202C2F]">Text And Image To Video</h3>
           </div>
         </div>
       </div>
       <section className="mt-[30px] relative">
-      <h1 className="section-title text-center mb-[46px] ">
+      <h1 className="section-title text-center mb-[20px] md:mb-[46px]  ">
       The fastest, easiest way to <br />
           <span>
           Transform your Videos{" "}
@@ -131,9 +131,9 @@ export default function Home() {
         ))}
        </div>
       </section>
-      <section className="my-[80px] relative">
-       <div className="grid grid-cols-2">
-        <div className="grid gap-[40px] ">
+      <section className="my-[40px] relative md:my-[80px]">
+       <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-[20px] md:gap-[40px] ">
         {StepCardData.map((data)=> (
           <StepsCard
           key={data.id}
@@ -143,15 +143,15 @@ export default function Home() {
           />
         )) }
         </div>
-        <div className="md:pl-[100px]">
-         <div className="sticky top-[35%] ">
+        <div className="mt-[20px] md:mt-0 md:pl-[30px] lg:pl-[100px]">
+         <div className="md:sticky md:top-[35%] ">
          <h4 className="#202C2F text-base"><span className="bg-[#E56F20] h-[9px] w-[9px] rounded-full inline-block mr-[10px] ">
           </span> Result-Driven</h4>
           <h2 className="section-title">How It <span>Works.</span></h2>
-          <p className="text-[#202020] text-lg my-[30px] ">Our goal is to be the most successful Marketing Automation service provider in the market through deliverance and diligence. We aim to automate the business with best practices and make it simple for business owners.</p>
+          <p className="text-[#202020] text-lg mt-[10px] mb-[20px] md:my-[30px] ">Our goal is to be the most successful Marketing Automation service provider in the market through deliverance and diligence. We aim to automate the business with best practices and make it simple for business owners.</p>
         <button className="button">Get Started Now</button>
         
-         </div>
+         </div> 
         </div>
        </div>
       </section>

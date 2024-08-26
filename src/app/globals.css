@@ -15,7 +15,7 @@
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 40px; 
   align-items: center;
 }
 .nav-menu-list {
@@ -39,7 +39,8 @@ input:focus-visible, textarea:focus-visible {
   outline: none;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1200px;    
+  padding: 0 15px;
 }
 .video-frame video { 
   background: url(../assets/images/laptop.png);
@@ -104,16 +105,23 @@ input:focus-visible, textarea:focus-visible {
   .nav-menu {
     display: none;
     width: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    padding: 40px 18px;
+    padding: 80px 20px;
     background: #d9e0e9;
     height: 100vh;
     overflow-y: auto;
     z-index: 2;
     flex-direction: column;
+    min-height: 100%;
   }
+  .section-title {
+    font-size: 42px;
+}
+  .video-frame {
+    max-width: 545px;
+}
   .nav-menu.open {
     display: block;
   }
@@ -126,4 +134,18 @@ input:focus-visible, textarea:focus-visible {
     top: 22px;
     font-size: 20px;
   }
+}
+@media screen and (max-width: 767px) { 
+.section-title {
+  font-size: 30px;
+  line-height: 38px;
+}
+.video-frame {
+  max-width: 372px;
+}
+}
+@media screen and (max-width: 524px) { 
+  .video-frame {
+    max-width: 300px;
+}
 }
