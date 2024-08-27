@@ -76,8 +76,9 @@ const StepCardData = [
 export default function Home() {
 
   return (
-    <main className="container">
-      <div className="pt-[40px] md:pt-[60px] lg:pt-[80px] text-center">
+    <main className="main">
+<div className="container">
+<div className="pt-[40px] md:pt-[60px] lg:pt-[80px] text-center">
         <h1 className="text-black text-[30px] leading-[40px] md:text-[42px] lg:text-[66px] font-[800] md:leading-[66px] lg:leading-[86px]">
           Effortless Video Production: <br />
           <span className="text-[#e56f20]">
@@ -88,7 +89,7 @@ export default function Home() {
           Instantly Convert Videos into Multiple Languages with Just One Click,
           Expanding Your Global Reach
         </h3>
-        <button className="button  mt-[20px] md:mt-[40px]">Free Trial</button>
+        <button className="button mt-[20px] md:mt-[40px] md:px-[45px]">Free Trial</button>
       </div>
       <div>
         <div className="relative pt-[50px]">
@@ -101,16 +102,18 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center bg-white gap-4 rounded-lg pr-5 absolute bottom-[30%] left-[100px] ">
             <VideoIcon2 />
-            <h3 className="text-[#202C2F]">Text And Image To Video</h3>
+            <h3 className="text-[#202C2F]">Audio And Image To Video</h3>
           </div>
-          <div className="hidden md:flex items-center bg-white gap-4 rounded-lg pr-5 absolute top-[50%] translate-y-[-50%]  right-[30px] ">
+          <div className="hidden md:flex p-[7px] items-center bg-white gap-4 rounded-lg pr-5 absolute top-[50%] translate-y-[-50%]  right-[60px] ">
             <VideoIcon3 />
-            <h3 className="text-[#202C2F]">Text And Image To Video</h3>
+            <h3 className="text-[#202C2F]">Video Translation</h3>
           </div>
         </div>
       </div>
+   </div>
       <section className="mt-[30px] relative">
-      <h1 className="section-title text-center mb-[20px] md:mb-[46px]  ">
+     <div className="container">
+     <h1 className="section-title text-center mb-[20px] md:mb-[46px]  ">
       The fastest, easiest way to <br />
           <span>
           Transform your Videos{" "}
@@ -130,9 +133,11 @@ export default function Home() {
           />
         ))}
        </div>
+     </div>
       </section>
-      <section className="my-[40px] relative md:my-[80px]">
-       <div className="grid grid-cols-1 md:grid-cols-2">
+ <section className="my-[40px] relative md:my-[80px]">
+  <div className="container">
+  <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="grid gap-[20px] md:gap-[40px] ">
         {StepCardData.map((data)=> (
           <StepsCard
@@ -154,6 +159,7 @@ export default function Home() {
          </div> 
         </div>
        </div>
+</div>
       </section>
       <Contact />
     </main>

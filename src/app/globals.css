@@ -15,7 +15,7 @@
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 40px; 
+  gap: 40px;
   align-items: center;
 }
 .nav-menu-list {
@@ -35,14 +35,15 @@
   max-width: 875px;
   margin: 0 auto;
 }
-input:focus-visible, textarea:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
   outline: none;
 }
 .container {
-  max-width: 1200px;    
+  max-width: 1200px;
   padding: 0 15px;
 }
-.video-frame video { 
+.video-frame video {
   background: url(../assets/images/laptop.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -68,14 +69,14 @@ input:focus-visible, textarea:focus-visible {
   z-index: 2;
 }
 .section-title {
-  color: #202C2F;
+  color: #202c2f;
   font-size: 48px;
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
 }
 .section-title span {
-  color: #E56F20;
+  color: #e56f20;
 }
 #card-1 {
   --index: 1;
@@ -93,13 +94,18 @@ input:focus-visible, textarea:focus-visible {
   --index: 4;
 }
 .card-wrapper {
-  padding-top: calc(var(--index) * 2em)
+  padding-top: calc(var(--index) * 2em);
 }
 .nav-menu-list.active {
-  color: #E56F20; /* Example active color */
+  color: #e56f20; /* Example active color */
 }
-
-
+#card-1 .language-imges,
+#card-2 .language-imges {
+  display: none;
+}
+.about-dropdown .questions:last-child {
+  margin: 0;
+}
 
 @media screen and (max-width: 1024px) {
   .nav-menu {
@@ -108,8 +114,8 @@ input:focus-visible, textarea:focus-visible {
     position: fixed;
     left: 0;
     top: 0;
-    padding: 80px 20px;
-    background: #d9e0e9;
+    padding: 40px 20px;
+    background: #ededed;
     height: 100vh;
     overflow-y: auto;
     z-index: 2;
@@ -118,10 +124,10 @@ input:focus-visible, textarea:focus-visible {
   }
   .section-title {
     font-size: 42px;
-}
+  }
   .video-frame {
     max-width: 545px;
-}
+  }
   .nav-menu.open {
     display: block;
   }
@@ -135,17 +141,22 @@ input:focus-visible, textarea:focus-visible {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 767px) { 
-.section-title {
-  font-size: 30px;
-  line-height: 38px;
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .video-frame {
+    max-width: 372px;
+  }
+  .button {
+    font-size: 14px;
+    padding: 10px 20px;
+    height: 45px;
+  }
 }
-.video-frame {
-  max-width: 372px;
-}
-}
-@media screen and (max-width: 524px) { 
+@media screen and (max-width: 524px) {
   .video-frame {
     max-width: 300px;
-}
+  }
 }
