@@ -43,6 +43,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="w-[100%] pt-[20px] lg:w-[35%] lg:pt-0">
           <h2 className="text-[#e56f20] text-xl font-semibold mb-3 md:mb-7">Sign Up</h2>
+          <p className="text-[#212f33] text-base mb-2 md:mb-[17px]">Enter your email address to get the latest updates.</p>
           <label htmlFor="" className="flex flex-col items-center justify-between p-1 rounded-[10px] border border-[#b8b8b8] bg-white md:flex-row">
             <input type="email" name="" id="" placeholder="Your Email Address..."
             className="h-full px-[18px] py-3  w-full md:w-auto placeholder:tracking-[2px]"/>

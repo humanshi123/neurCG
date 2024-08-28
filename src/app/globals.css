@@ -40,7 +40,7 @@ textarea:focus-visible {
   outline: none;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1230px;
   padding: 0 15px;
 }
 .video-frame video {
@@ -106,7 +106,51 @@ textarea:focus-visible {
 .about-dropdown .questions:last-child {
   margin: 0;
 }
-
+ul.half-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+ul.half-list li {
+  width: calc(50% - 5px);
+  padding-left: 30px;
+  position: relative;
+}
+ul.orange-check li {
+  padding-left: 30px;
+  position: relative;
+  color: #13131c;
+}
+ul.orange-check li::before,
+ul.white-checks li::before {
+  content: "";
+  background: url(/_next/static/media/orangeCheck.d076b2e3.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+ul.white-checks li::before {
+  background: url(../assets/images/white.svg);
+}
+ul.list-design li {
+  font-size: 13.977px;
+  font-weight: 400;
+  line-height: 33.944px;
+}
+.iamge-shadow:before {
+  content: "";
+  background: #E56F20;
+  border-radius: 17px;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  z-index: -1;
+  left: 25px;
+  bottom: 0;
+}
 @media screen and (max-width: 1024px) {
   .nav-menu {
     display: none;
@@ -154,9 +198,19 @@ textarea:focus-visible {
     padding: 10px 20px;
     height: 45px;
   }
+  .iamge-shadow:before {
+    left: 0;
+}
 }
 @media screen and (max-width: 524px) {
   .video-frame {
     max-width: 300px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .drop svg {
+    width: 20px;
+    height: 20px;
   }
 }

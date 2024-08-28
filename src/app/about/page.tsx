@@ -43,13 +43,13 @@ const Page = () => {
       </section>
       <section>
         <div className="container">
-          <div className="text-center bg-[#f3f7f5] rounded-[32px] py-[67px] px-[88px] my-[80px] ">
+          <div className="text-center bg-[#f3f7f5] md:rounded-[32px] rounded-[20px] p-5 md:py-[67px] md:px-[88px] my-10 md:my-[80px] ">
             <h2 className="section-title capitalize">
               {" "}
               Who We
               <span> Are</span>
             </h2>
-            <p className="mt-8 text-[#202020] text-lg font-normal opacity-70 leading-[30px]">
+            <p className="md:mt-8 mt-4 text-[#202020] text-base md:text-lg font-normal opacity-70 md:leading-[30px]">
               NeurCG is a start-up project that started a year ago when two
               scientists specialists in machine learning and computer vision,
               decided to transform science into business. No one could possibly
@@ -65,13 +65,13 @@ const Page = () => {
       </section>
       <section>
         <div className="container">
-          <div className="grid md:grid-cols-2 items-center gap-5 md:gap-[40px] bg-[#f3f7f5] rounded-[32px] py-[80px] px-[55px]">
+          <div className="grid md:grid-cols-2 items-center gap-5 md:gap-[40px] bg-[#f3f7f5] md:rounded-[32px] rounded-[20px] p-5 md:py-[80px] md:px-[55px]">
             <div>
               {" "}
-              <h2 className="section-title mb-8">
+              <h2 className="section-title nd:mb-8 mb-4">
                 Our <span>Dream</span>
               </h2>
-              <p className=" text-[#202020] text-lg font-normal opacity-70 leading-[30px]">
+              <p className=" text-[#202020] text-base md:text-lg font-normal opacity-70 md:leading-[30px]">
                 NeurCG provides cutting-edge Ai-based graphics technologies and
                 services that allow one to produce realistic human faces. We
                 have scalable solutions for companies of all sizes. It all began
@@ -79,7 +79,7 @@ const Page = () => {
                 and intelligent services to different industries such as online
                 fashion trail and videogame developers.
               </p>
-              <p className="mt-2 text-[#202020] text-lg font-normal opacity-70 leading-[30px]">
+              <p className="mt-2 text-[#202020] text-base md:text-lg font-normal opacity-70 md:leading-[30px]">
                 We listen carefully to our potential clients to correctly
                 understand their needs and exceed their expectations of our
                 product. We know how to analyze information so that our offer is
@@ -94,12 +94,12 @@ const Page = () => {
       </section>
       <section>
         <div className="container">
-          <div className=" bg-[#f3f7f5] rounded-[32px] py-[60px] px-[55px] my-[80px] ">
-            <div className="grid grid-cols-[minmax(0,_5fr)_minmax(0,_7fr)] md:gap-x-[100px] pt-5 ">
+          <div className=" bg-[#f3f7f5] md:rounded-[32px] rounded-[20px] p-5 md:py-[60px] md:px-[55px] my-10 md:my-[80px] ">
+            <div className="grid gap-y-2 md:grid-cols-[minmax(0,_5fr)_minmax(0,_7fr)] md:gap-x-[100px] md:pt-5 ">
               <h2 className="section-title ">
                 Meet The Team <span>Our Professionals</span>
               </h2>
-              <p className=" text-[#202020] text-lg font-normal opacity-70 leading-[30px]">
+              <p className=" text-[#202020] text-sm md:text-lg font-normal opacity-70 md:leading-[30px]">
                 NeurCG provides cutting-edge Ai-based graphics technologies and
                 services that allow one to produce realistic human faces. We
                 have scalable solutions for companies of all sizes. It all began
@@ -107,7 +107,7 @@ const Page = () => {
                 and intelligent services to different.
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-4 md:gap-x-[48px] ">
+            <div className="mt-7 md:mt-0 grid md:grid-cols-3 gap-4 md:gap-x-[48px] ">
             {TeamData.map((data)=>(
            <TeamCard 
            key={data.id}
@@ -119,15 +119,15 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>  
       <section>
         <FaqBox />
       </section>
-      <section className="bg-[#E56F20] py-[80px] px-5 mt-[80px]">
+      <section className="bg-[#E56F20] py-10 md:py-[80px] px-5 mt-10 md:mt-[80px]">
         <div className="max-w-[910px] mx-auto text-center ">
-          <h2 className="mb-10 text-[80px] text-white font-[800] leading-[80px] ">Start creating videos. No experience needed.</h2>
+          <h2 className=" mb-5 md:mb-10 text-[30px] md:text-[46px] lg:text-[80px] text-white font-bold md:font-[800] leading-[normal] lg:leading-[80px] ">Start creating videos. No experience needed.</h2>
          <div className="flex justify-center  ">
-         <button className="text-[18px] font-[700] bg-white text-[#E56F20] flex items-center rounded-[25px] py-3 px-7 gap-[5px]">
+         <button className="text-base md:text-lg font-[700] bg-white text-[#E56F20] flex items-center rounded-[25px] py-3 px-7 gap-[5px]">
          Get Started <ButtonArrow /></button>
          </div>
         </div>

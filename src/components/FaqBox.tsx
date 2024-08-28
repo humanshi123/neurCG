@@ -45,8 +45,8 @@ const FaqBox: React.FC = () => {
 
   return (
     <div className='container'>   
-    <div className="about-dropdown bg-[#f3f7f5] rounded-[32px] py-[80px] px-[65px]">
-        <h2 className='section-title mb-[45px] text-center'>Want To <span> Know More?</span></h2>
+    <div className="about-dropdown bg-[#f3f7f5] md:rounded-[32px] rounded-[20px] md:py-[80px] p-6 md:px-[65px]">
+        <h2 className='section-title mb-5 md:mb-[45px] text-center'>Want To <span> Know More?</span></h2>
         <div className="">
           {faqData.map((dropdown, index) => (
             <div className='questions md:mb-[20px] mb-[10px] pb-[20px] border-b border-[#0000001a]' key={index}>

@@ -64,7 +64,7 @@ const ProductDesc: React.FC<CardProps> = ({
         </Link>
       </div>
       <div>
-        <div className=" relative md:pl-[70px]">
+        <div className="iamge-shadow relative z-[2] pl-5 md:pl-[70px]">
           {imgSrc && (
             <Image
               src={imgSrc}

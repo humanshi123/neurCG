@@ -24,28 +24,32 @@ const Header = () => {
     setIsToggleOpen(false);
   };
 
+  // Handle link click to close the sidebar
+  const handleLinkClick = () => {
+    setIsToggleOpen(false);
+  };
+
   return (
-    //sticky top-[30px]
     <header className="px-[15px] mt-[10px] sticky top-[10px] z-10 lg:mt-[30px] lg:px-[30px] lg:top-[30px]">
-      <div className=" shadow-md nav-container w-full bg-white flex rounded-[7px] items-center justify-between py-[12.5px] px-[15px]  md:px-[30px]">
+      <div className="shadow-md nav-container w-full bg-white flex rounded-[7px] items-center justify-between py-[12.5px] px-[15px] md:px-[30px]">
         <div className="nav_logo lg:w-[188px]">
           <Link href="/" className="nav-logo-link">
-            <Image src={logo} alt="" />
+            <Image src={logo} alt="Logo" />
           </Link>
         </div>
         <div className={`nav-menu ${isToggleOpen ? "open" : ""}`}>
-          <ul className="lg:flex items-center gap-[36px] ">
+          <ul className="lg:flex items-center gap-[36px]">
             <button className="close-btn lg:hidden" onClick={handleToggleClose}>
               <ToggleClose />
             </button>
             <li>
-              {/* className="nav-menu-list" */}
               <Link
                 href="/"
                 className={clsx(
-                  "nav-menu-list", // default class
-                  { active: isActive("/") } // conditional class
+                  "nav-menu-list", 
+                  { active: isActive("/") }
                 )}
+                onClick={handleLinkClick}
               >
                 Home
               </Link>
@@ -54,50 +58,67 @@ const Header = () => {
               <Link
                 href="/use-case"
                 className={clsx(
-                  "nav-menu-list", // default class
-                  { active: isActive("/use-case") } // conditional class
+                  "nav-menu-list",
+                  { active: isActive("/use-case") }
                 )}
+                onClick={handleLinkClick}
               >
                 Use Cases
               </Link>
             </li>
             <li>
-              <Link href="/contact" className={clsx(
-                  "nav-menu-list", // default class
-                  { active: isActive("/contact") } // conditional class
-                )}>
+              <Link
+                href="/contact"
+                className={clsx(
+                  "nav-menu-list",
+                  { active: isActive("/contact") }
+                )}
+                onClick={handleLinkClick}
+              >
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href="/about" className={clsx(
-                  "nav-menu-list", // default class
-                  { active: isActive("/about") } // conditional class
-                )}>
+              <Link
+                href="/about"
+                className={clsx(
+                  "nav-menu-list",
+                  { active: isActive("/about") }
+                )}
+                onClick={handleLinkClick}
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/pricing" className={clsx(
-                  "nav-menu-list", // default class
-                  { active: isActive("/pricing") } // conditional class
-                )}>
+              <Link
+                href="/pricing"
+                className={clsx(
+                  "nav-menu-list",
+                  { active: isActive("/pricing") }
+                )}
+                onClick={handleLinkClick}
+              >
                 Pricing
               </Link>
             </li>
-           
-            <li className="md:hidden ">
-            <Link
-              href="/contact"
-              className="nav-menu-list"
-            >
-              Free Trial
-            </Link>
+            <li className="md:hidden">
+              <Link
+                href="/contact"
+                className="nav-menu-list"
+                onClick={handleLinkClick}
+              >
+                Free Trial
+              </Link>
             </li>
-            <li className="md:hidden ">
-            <Link href="/contact" className="nav-menu-list">
-              Login
-            </Link>
+            <li className="md:hidden">
+              <Link
+                href="/contact"
+                className="nav-menu-list"
+                onClick={handleLinkClick}
+              >
+                Login
+              </Link>
             </li>
           </ul>
         </div>
