@@ -4,7 +4,7 @@ const PricingPlans: React.FC = () => {
   return (
     <div className="container">
       <div className="my-[40px] md:mt-[55px] md:mb-[100px] text-center">
-        <h2 className="section-title mb-5 md:mb-[45px] ">Choose Your <span>Pricing Plan</span></h2>
+        <h2 className="section-title mb-5 md:mb-[45px] !font-[600]">Choose Your <span>Pricing Plan</span></h2>
         <div className="grid md:grid-cols-3 gap-5 lg:gap-[57px] ">
           {/* Free Trial Plan */}
           <div className="border border-[#262626] rounded-[10px] py-5 px-4 bg-white md:mt-10">
