@@ -113,12 +113,12 @@ export default function Home() {
    </div>
       <section className="mt-[30px] relative">
      <div className="container">
-     <h1 className="section-title text-center mb-[20px] md:mb-[46px]  ">
+     <h2 className="section-title text-center mb-[20px] md:mb-[46px]  ">
       The fastest, easiest way to <br />
           <span>
           Transform your Videos{" "}
           </span>
-        </h1>
+        </h2>
        <div className="sticky-cards">
        {OverviewData.map((item) => (
           <ProductDesc
