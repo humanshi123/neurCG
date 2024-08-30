@@ -78,14 +78,14 @@ export default function Home() {
   return (
     <main className="main">
 <div className="container">
-<div className="pt-[40px] md:pt-[60px] lg:pt-[80px] text-center">
+<div className="pt-[10px] md:pt-[30px] lg:pt-[50px] text-center">
         <h1 className="text-black text-[30px] leading-[40px] md:text-[42px] lg:text-[66px] font-[800] md:leading-[66px] lg:leading-[86px]">
           Effortless Video Production: <br />
           <span className="text-[#e56f20]">
             AI-Driven, Instant, and Multilingual{" "}
           </span>
         </h1>
-        <h3 className="mt-[20px] font-[600] text-[#00000080] max-w-[540px] mx-auto md:mt-[34px]  ">
+        <h3 className="mt-[20px] md:text-[22px] font-[600] text-[#00000080] max-w-[800px] mx-auto md:mt-[34px]  ">
           Instantly Convert Videos into Multiple Languages with Just One Click,
           Expanding Your Global Reach
         </h3>
@@ -96,11 +96,11 @@ export default function Home() {
           <div className="video-frame">
             <VideoPlayer url="/assets/homevideo.mp4" />
           </div>
-          <div className="hidden md:flex items-center bg-white gap-4 rounded-lg pr-5 absolute top-[25%] translate-y-[-25%] left-[50px]  ">
+          <div className="hidden md:flex p-[7px] items-center bg-white gap-4 rounded-lg pr-5 absolute top-[25%] translate-y-[-25%] left-[50px]  ">
             <VideoIcon1 />
             <h3 className="text-[#202C2F]">Text And Image To Video</h3>
           </div>
-          <div className="hidden md:flex items-center bg-white gap-4 rounded-lg pr-5 absolute bottom-[30%] left-[100px] ">
+          <div className="hidden md:flex p-[7px] items-center bg-white gap-4 rounded-lg pr-5 absolute bottom-[30%] left-[100px] ">
             <VideoIcon2 />
             <h3 className="text-[#202C2F]">Audio And Image To Video</h3>
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       </div>
    </div>
-      <section className="mt-[30px] relative">
+    <section id="use-case" className="pt-[30px] line-bg relative">
      <div className="container">
      <h2 className="section-title text-center mb-[20px] md:mb-[46px]  ">
       The fastest, easiest way to <br />
@@ -149,19 +149,22 @@ export default function Home() {
         )) }
         </div>
         <div className="mt-[20px] md:mt-0 md:pl-[30px] lg:pl-[100px]">
-         <div className="md:sticky md:top-[35%] ">
-         <h4 className="#202C2F text-base"><span className="bg-[#E56F20] h-[9px] w-[9px] rounded-full inline-block mr-[10px] ">
+         <div className="md:sticky md:top-[35%] px-2 md:px-0">
+         <h4 className="text-[#202C2F] text-base"><span className="bg-[#E56F20] h-[9px] w-[9px] rounded-full inline-block mr-[10px] ">
           </span> Result-Driven</h4>
           <h2 className="section-title">How It <span>Works.</span></h2>
-          <p className="text-[#202020] text-lg mt-[10px] mb-[20px] md:my-[30px] ">Our goal is to be the most successful Marketing Automation service provider in the market through deliverance and diligence. We aim to automate the business with best practices and make it simple for business owners.</p>
-        <button className="button">Get Started Now</button>
+          <p className="text-[#202020] text-lg mt-[10px] mb-[20px] md:my-[30px] opacity-70">Our goal is to be the most successful Marketing Automation service provider in the market through deliverance and diligence. We aim to automate the business with best practices and make it simple for business owners.</p>
+        <button className="button md:px-[43px]">Get Started Now</button>
         
          </div> 
         </div>
        </div>
 </div>
-      </section>
-      <Contact />
+</section>
+  <section id="contact-us">
+  <Contact />
+  </section>
+
     </main>
   );
 }

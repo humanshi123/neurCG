@@ -1,7 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { RightIcon, LeftIcon } from "@/utils/svgicons";
+import { RightIcon, LeftIcon, PlayIcon } from "@/utils/svgicons";
 import lang1 from "../assets/images/lang1.png"
 import lang2 from "../assets/images/lang2.png"
 import lang3 from "../assets/images/lang3.png"
@@ -58,13 +58,15 @@ const ProductDesc: React.FC<CardProps> = ({
           {" "}
           {title}
         </h2>
-        <p className="text-[#818181] text-[16px] mt-2 mb-[35px] md:mb-[85px] md:text-lg">{description} </p>
-        <Link href={buttonLink} className="button">
+        <p className="text-[#818181] text-[16px] mt-2 mb-[20px] md:mb-[85px] md:text-lg">{description} </p>
+        <div>
+        <Link href={buttonLink} className="custom-button button md:min-w-[146px] ">
           Try Now{" "}
         </Link>
+        </div>
       </div>
-      <div>
-        <div className="iamge-shadow relative z-[2] pl-5 md:pl-[70px]">
+      <div className=" md:pl-[70px]">
+        <div className="iamge-shadow relative z-[2] ">
           {imgSrc && (
             <Image
               src={imgSrc}
@@ -75,18 +77,19 @@ const ProductDesc: React.FC<CardProps> = ({
           <div className="hidden md:block absolute top-[64px] right-[-46px] bg-white/10 rounded-full backdrop-blur-[19.30px] p-3">
             {icon1}
           </div>
-          <div className="hidden md:block  absolute bottom-[28px] left-[-12px] ">{icon2}</div>
+          <div className="hidden md:block  absolute bottom-[28px] left-[-78px] ">{icon2}</div>
           <p className="hidden md:block  absolute right-[20px] top-[50px] ">
             <RightIcon />{" "}
           </p>
-          <p className="hidden md:block  absolute left-[100px] top-[40%] translate-y-[-40%] ">
+          <p className="hidden md:block  absolute left-[19px] top-[40%] translate-y-[-40%] ">
             <LeftIcon />{" "}
           </p>
+          <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "><PlayIcon /> </p>
         </div>
       </div>
 
     </div>
-    <div className="language-imges grid grid-cols-2 md:flex mt-[60px] gap-3 md:gap-[22px]">
+    <div className="language-imges grid grid-cols-2 md:flex mt-[30px] md:mt-[60px] gap-3 md:gap-[22px]">
     {langData.map((data)=>(
     <LanguageCard 
     key={data.id}

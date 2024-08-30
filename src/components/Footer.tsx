@@ -46,14 +46,14 @@ const Footer: React.FC = () => {
           <p className="text-[#212f33] text-base mb-2 md:mb-[17px]">Enter your email address to get the latest updates.</p>
           <label htmlFor="" className="flex flex-col items-center justify-between p-1 rounded-[10px] border border-[#b8b8b8] bg-white md:flex-row">
             <input type="email" name="" id="" placeholder="Your Email Address..."
-            className="h-full px-[18px] py-3  w-full md:w-auto placeholder:tracking-[2px]"/>
-            <button className="button !h-[47px  w-full md:w-auto">Subscribe</button>
+            className="h-full px-[18px] py-3  w-full placeholder:tracking-[2px]"/>
+            <button className="button !h-[47px] tracking-[1px] leading-[25px] !py-[10px] w-full md:w-auto ">Subscribe</button>
           </label>
           </div>
         </div>
-        <div className="copyright pt-[30px] pb-5 px-[15px] bg-[#343434] mx-[15px] rounded-t-[20px] text-center gap-2 justify-center flex flex-wrap lg:flex-nowrap items-center md:justify-between md:px-[40px] lg:px-[70px] md:mx-[32px]">
+        <div className="copyright pt-[31px] pb-[20.5px] px-[15px] bg-[#343434] mx-[15px] rounded-t-[20px] text-center gap-2 justify-center flex flex-wrap lg:flex-nowrap items-center md:justify-between md:px-[40px] lg:px-[70px] md:mx-[32px]">
           <Link href="/" className="nav-logo-link">
-            <Image src={logo} alt="" />
+            <Image src={logo} alt="" className="max-w-[110px] "/>
           </Link>
           <p className="text-center text-white text-base leading-[25px] tracking-wide w-full md:w-auto">Copyright © 2020 - 2025 NeurCG</p>
         <div className="flex items-center gap-4">

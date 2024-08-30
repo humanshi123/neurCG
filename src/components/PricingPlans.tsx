@@ -4,13 +4,13 @@ const PricingPlans: React.FC = () => {
   return (
     <div className="container">
       <div className="my-[40px] md:mt-[55px] md:mb-[100px] text-center">
-        <h2 className="section-title mb-5 md:mb-[45px] !font-[600]">Choose Your <span>Pricing Plan</span></h2>
+        <h2 className="section-title mb-5 md:mb-[45px]">Choose Your <span>Pricing Plan</span></h2>
         <div className="grid md:grid-cols-3 gap-5 lg:gap-[57px] ">
           {/* Free Trial Plan */}
           <div className="border border-[#262626] rounded-[10px] py-5 px-4 bg-white md:mt-10">
            <div className='flex flex-col justify-between h-full'>
            <div>
-           <p className="text-[24px] font-semibold mb-[30px] border border-[#262626] text-[#262626] rounded-[10px] inline-block px-5 py-1">Free Trial</p>
+           <p className="text-[24px] font-semibold mb-3 border border-[#262626] text-[#262626] rounded-[10px] inline-block px-5 py-1">Free Trial</p>
            <h2 className="md:text-[40px] text-[30px] lg:text-[60px] font-[600] leading-[normal] text-[#262626]">€0</h2>
             <p className="text-sm text-[#81A7BA] mb-5">User/Month</p>
             <ul className="text-left orange-check list-design">
@@ -53,7 +53,7 @@ const PricingPlans: React.FC = () => {
           <div className="border border-[#262626] rounded-[10px] py-5 px-4 bg-white md:mt-10">
           <div className='flex flex-col justify-between h-full'>
             <div>
-            <p className="text-[24px] font-semibold mb-[30px] border border-[#262626] text-[#262626] rounded-[10px] inline-block px-5 py-1">Pro Plan</p>
+            <p className="text-[24px] font-semibold mb-3 border border-[#262626] text-[#262626] rounded-[10px] inline-block px-5 py-1">Pro Plan</p>
             <h2 className="md:text-[40px] text-[30px] lg:text-[60px] font-[600] leading-[normal] text-[#262626]">€37.50</h2>
             <p className="text-sm text-[#81A7BA] mb-5">User/Month</p>
             <ul className="text-left half-list orange-check list-design">

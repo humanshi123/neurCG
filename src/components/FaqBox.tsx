@@ -50,8 +50,8 @@ const FaqBox: React.FC = () => {
         <div className="">
           {faqData.map((dropdown, index) => (
             <div className='questions md:mb-[20px] mb-[10px] pb-[20px] border-b border-[#0000001a]' key={index}>
-              <h2
-                className={`md:text-[20px]  text-[#626262] text-base cursor-pointer flex justify-between md:items-center ${
+              <p
+                className={`md:text-[20px] opacity-70 text-[#202020] text-base cursor-pointer flex justify-between md:items-center ${
                     dropdownStates[index] ? 'active' : ''
                   }`}
                 onClick={() => toggleDropdown(index)}
@@ -64,7 +64,7 @@ const FaqBox: React.FC = () => {
                     <span className="transition duration-300 transform rotate-0"><DropDown /> </span>
                   )}
                 </span>
-              </h2>
+              </p>
               <div
                 className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
                   dropdownStates[index] ? 'max-h-screen' : 'max-h-0'

@@ -3,7 +3,6 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section>
 <div className="container">
 <div className="grid  gap-10 items-center lg:grid-cols-[minmax(0,_5.5fr)_minmax(0,_6.5fr)]">
         <div className="rounded-[20px] bg-[#FCF0E8] py-[30px] px-[15px] md:py-[60px] md:px-[40px]">
@@ -76,11 +75,11 @@ const Contact = () => {
             className="w-full bg-[#F0F0F0] rounded-[10px] p-[14px] placeholder:text-[#B0B0B0] "
             placeholder="Type anything..."
           ></textarea>
-          <button className="button mt-[35px] md:px-[40px]">Submit</button>
+          <button className="button mt-5 md:mt-[35px] md:px-[40px]">Submit</button>
         </div>
       </div>
 </div>
-    </section>
+
   );
 };
 

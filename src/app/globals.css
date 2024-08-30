@@ -10,7 +10,9 @@
   font-weight: 400;
   line-height: normal;
   padding: 15px 30px;
+  display: inline-block;
   height: 55px;
+  text-align: center;
 }
 .nav-menu {
   list-style: none;
@@ -24,6 +26,7 @@
   font-size: 14px;
   padding: 8px 10px;
   color: #202c2f;
+  font-family: var(--font-inter);
 }
 .menuToggleBtn {
   display: none;
@@ -124,7 +127,7 @@ ul.orange-check li {
 ul.orange-check li::before,
 ul.white-checks li::before {
   content: "";
-  background: url(/_next/static/media/orangeCheck.d076b2e3.svg);
+  background: url(../assets//images/orangeCheck.svg);
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
@@ -148,9 +151,16 @@ ul.list-design li {
   height: 90%;
   position: absolute;
   z-index: -1;
-  left: 25px;
+  left: -38px;
   bottom: 0;
 }
+.line-bg {
+  background: url(/_next/static/media/linebackground.7e602967.svg) no-repeat;
+  background-position: top right;
+  background-attachment: fixed;
+}
+
+
 @media screen and (max-width: 1024px) {
   .nav-menu {
     display: none;
@@ -201,6 +211,11 @@ ul.list-design li {
   .iamge-shadow:before {
     left: 0;
 }
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 }
 @media screen and (max-width: 524px) {
   .video-frame {
@@ -213,4 +228,7 @@ ul.list-design li {
     width: 20px;
     height: 20px;
   }
+
+
+
 }
