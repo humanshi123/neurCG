@@ -155,7 +155,7 @@ ul.list-design li {
   bottom: 0;
 }
 .line-bg {
-  background: url(/_next/static/media/linebackground.7e602967.svg) no-repeat;
+  background: url(../assets/images/linebackground.svg) no-repeat;
   background-position: top right;
   background-attachment: fixed;
 }
