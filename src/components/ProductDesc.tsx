@@ -51,7 +51,8 @@ const ProductDesc: React.FC<CardProps> = ({
   icon2,
 }) => {
   return (
-   <div id={id} className="card-wrapper !pt-[0px] md:sticky md:!top-[100px] py-[30px] bg-[#F5F5F5] rounded-[20px] pr-[20px] pl-[20px] md:px-[60px] md:py-[60px] mb-5 lg:px-[85px]">
+<div id={id} className="card-wrapper md:sticky md:!top-[100px]">
+<div id={id} className="py-[30px] bg-[#F5F5F5] rounded-[20px] pr-[20px] pl-[20px] md:px-[60px] md:py-[60px] mb-5 lg:px-[85px]">
      <div className="grid grid-cols-1 items-center gap-[15px] pt-[53px]  md:grid-cols-2 ">
       <div className="pr-2 pl-[40px] pb-[20px] md:pl-0 md:pb-0">
         <h2 className="title-icon relative text-[#202C2F] text-[22px] font-[700] md:text-[30px]">
@@ -97,6 +98,7 @@ const ProductDesc: React.FC<CardProps> = ({
     ))}
     </div>
    </div>
+</div>
   );
 };
 

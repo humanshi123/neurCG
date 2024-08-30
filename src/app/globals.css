@@ -97,7 +97,7 @@ textarea:focus-visible {
   --index: 4;
 }
 .card-wrapper {
-  padding-top: calc(var(--index) * 2em);
+  padding-top: calc(var(--index) * 2.5em);
 }
 .nav-menu-list.active {
   color: #e56f20; /* Example active color */
@@ -159,7 +159,9 @@ ul.list-design li {
   background-position: top right;
   background-attachment: fixed;
 }
-
+.custom-button {
+  padding: 17px 30px 12px;
+}
 
 @media screen and (max-width: 1024px) {
   .nav-menu {
