@@ -34,7 +34,7 @@ const OverviewData = [
   },
   {
     id: "card-2",
-    title: "Convert Your Text And Image to Live Videos",
+    title: "Convert Your Audio And Image to Live Videos",
     description:
       "Creating over 500 unique text and photo-based avatar animations to bring your digital persona to life with vibrant, dynamic visuals.",
     imgSrc: img2,
@@ -44,9 +44,11 @@ const OverviewData = [
   },
   {
     id: "card-3",
-    title: "Convert Your Text And Image to Live Videos",
-    description:
-      "Creating over 500 unique text and photo-based avatar animations to bring your digital persona to life with vibrant, dynamic visuals.",
+    title: "Generate training video content in your language.",
+    description: [
+    "Clone your voice in 28 languages.",
+    "Choose from more than 75+ languages and 450+ accents.",
+    "Translate videos in just a few clicks."],
     imgSrc: img3,
     buttonLink: "#",
     icon1: <CardIcon3 />,
