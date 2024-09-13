@@ -34,7 +34,7 @@ const langData =[
 interface CardProps {
   id: string;
   title: string;
-  description: string;
+  description: string | string[]; 
   buttonLink: string;
   imgSrc?: string | StaticImageData;
   icon1: React.ReactNode;
@@ -55,11 +55,24 @@ const ProductDesc: React.FC<CardProps> = ({
 <div id={id} className="py-[30px] bg-[#F5F5F5] rounded-[20px] pr-[20px] pl-[20px] md:px-[60px] md:py-[60px] mb-5 lg:px-[85px]">
      <div className="grid grid-cols-1 items-center gap-[15px] pt-[53px]  md:grid-cols-2 ">
       <div className="pr-2 pl-[40px] pb-[20px] md:pl-0 md:pb-0">
-        <h2 className="title-icon relative text-[#202C2F] text-[22px] font-[700] md:text-[30px]">
+        <h2 className="title-icon relative text-[#202C2F] text-[22px] md:leading-[42px] font-[700] md:text-[30px]">
           {" "}
           {title}
         </h2>
-        <p className="text-[#818181] text-[16px] mt-2 mb-[20px] md:mb-[85px] md:text-lg">{description} </p>
+       
+        {/* Conditionally render the description as a list if it's an array */}
+        {Array.isArray(description) ? (
+              <ul className="text-[#818181] text-[16px] mt-2 mb-[20px] md:mb-[85px] md:text-lg list-disc ml-4">
+                {description.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-[#818181] text-[16px] mt-2 mb-[20px] md:mb-[85px] md:text-lg">
+                {description}
+              </p>
+            )}
+
         <div>
         <Link href={buttonLink} className="custom-button button md:min-w-[146px] ">
           Try Now{" "}
@@ -103,3 +116,4 @@ const ProductDesc: React.FC<CardProps> = ({
 };
 
 export default ProductDesc;
+
