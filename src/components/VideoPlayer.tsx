@@ -16,6 +16,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ url }) => {
         url={url}
         // url='/assets/homevideo.mp4'
         width='100%'
+        playing={true}
+        muted={true}
         height='100%'
         controls={true}
       />
@@ -24,3 +26,4 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ url }) => {
 }
 
 export default VideoPlayer
+
